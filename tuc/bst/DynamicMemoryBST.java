@@ -1,4 +1,3 @@
-package tuc.bst;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +9,7 @@ import java.util.List;
 public class DynamicMemoryBST implements TreeStructure {
 
     private TreeNode root;
+    private int repeti;
 
     public DynamicMemoryBST() {
         root = null;
@@ -22,6 +22,7 @@ public class DynamicMemoryBST implements TreeStructure {
 
     @Override
     public void insert(int key) {
+        repeti=0;
         root = insertRec(root, key);
     }
 
@@ -35,8 +36,10 @@ public class DynamicMemoryBST implements TreeStructure {
         }
 
         if (key < node.key) {
+            repeti+=1;
             node.left = insertRec(node.left, key);
         } else if (key > node.key) {
+            repeti+=1;
             node.right = insertRec(node.right, key);
         }
         // Αν key == node.key, δεν κάνουμε τίποτα.

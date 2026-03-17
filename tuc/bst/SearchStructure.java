@@ -1,4 +1,3 @@
-package tuc.bst;
 
 import java.util.List;
 
