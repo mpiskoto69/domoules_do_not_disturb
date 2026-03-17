@@ -1,7 +1,4 @@
-package tuc.bst;
-
 import java.io.IOException;
-import tuc.Elem;
 
 /*
  * Interface for binary search tree

@@ -1,5 +1,3 @@
-package tuc.bst;
-
 /*
  * ADT for binary tree nodes
  */

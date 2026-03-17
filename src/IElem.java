@@ -1,5 +1,3 @@
-package tuc;
-
 // Sample implementation for Elem interface.
 // A record with just an int field.
 public class IElem implements Elem {

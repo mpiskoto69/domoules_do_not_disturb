@@ -1,5 +1,3 @@
-package tuc.bst;
-
 import java.io.*;
 
 // Binary tree node with pointers to children
