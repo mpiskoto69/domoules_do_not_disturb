@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="41ecf0e4-d7ba-43d3-a2ff-fa36f8a60885" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinNodePtr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinNodePtr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClassicBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClassicBT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Elem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Elem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IElem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MatrixBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MatrixBT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1773753193651</updated>
-      <workItem from="1773753269175" duration="6400000" />
+      <workItem from="1773753269175" duration="6893000" />
     </task>
     <servers />
   </component>
