@@ -1,8 +1,10 @@
 public class MainTrial {
     public static void main(String[] args) {
         int N[] = {30, 50, 100, 200, 500, 800, 1000, 5000, 10000, 100000};
-        
+        double[][][] data = new double[4][10][9];
+        int Nindex = 0;
         for (int i : N ){
+            Nindex++;
             DynamicMemoryBST myTree = new DynamicMemoryBST();
             
             ArrayBST myArray = new ArrayBST(100000);
@@ -23,21 +25,68 @@ public class MainTrial {
             }else{
                 K=100;
             }
-
+            
+            
+            
             int[] randomInts2 = randomGenerator.ints(0, 2*i+1).limit(i).toArray();
-            for(int j=0; j<i; j++){
-                long totalTime;
+            long time1, time2;
 
-                
-                long time1, time2;
+            // loop for a)
+            for(int j=0; j<K; j++){
+
                 time1 = System.nanoTime();
                 myTree.insert(randomInts2[j]);
+                time2 = System.nanoTime();
+                data[0][Nindex][1] += time2 - time1;
+                data[0][Nindex][2] += myTree.getRepeti();
+                
+
+                time1 = System.nanoTime();
                 myArray.insert(randomInts2[j]);
                 time2 = System.nanoTime();
-                totalTime = time2 - time1;
-                long numberOfRepetitions = myTree.getRepeti();
-                float meanTimePerRepetition = (double) totalTime / numberOfRepetitions
-                System.out.println(totalTime);
+                data[0][Nindex][4] += time2 - time1;
+                data[0][Nindex][5] += myArray.getRepeti();
+            }
+            for(int l=0;l<9;l++){
+                data[0][Nindex][l] = data[0][Nindex][l] / K;
+            }
+            //loop for b)
+            for(int j=0; j<K; j++){
+
+                time1 = System.nanoTime();
+                myTree.delete(randomInts2[j]);
+                time2 = System.nanoTime();
+                data[1][Nindex][1] += time2 - time1;
+                data[1][Nindex][2] += myTree.getRepeti();
+                
+
+                time1 = System.nanoTime();
+                myArray.delete(randomInts2[j]);
+                time2 = System.nanoTime();
+                data[1][Nindex][4] += time2 - time1;
+                data[1][Nindex][5] += myArray.getRepeti();
+            }
+            for(int l=0;l<9;l++){
+                data[1][Nindex][l] = data[1][Nindex][l] / K;
+            }
+            //loop for c)
+            for(int j=0; j<K; j++){
+
+                time1 = System.nanoTime();
+                myTree.search(randomInts2[j]);
+                time2 = System.nanoTime();
+                data[2][Nindex][1] += time2 - time1;
+                data[2][Nindex][2] += myTree.getRepeti();
+                
+
+                time1 = System.nanoTime();
+                myArray.search(randomInts2[j]);
+                time2 = System.nanoTime();
+                data[2][Nindex][4] += time2 - time1;
+                data[2][Nindex][5] += myArray.getRepeti();
+            }
+            for(int l=0;l<9;l++){
+                data[2][Nindex][l] = data[2][Nindex][l] / K;
             }
         }
     }
